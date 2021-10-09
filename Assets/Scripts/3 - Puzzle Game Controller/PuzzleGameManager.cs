@@ -175,6 +175,8 @@ public class PuzzleGameManager : MonoBehaviour
         anim.Play("TurnUp");
         yield return new WaitForSeconds(0.4f);
         btn.image.sprite = puzzleImage;
+        yield return new WaitForSeconds(0.4f);
+        anim.Play("Active");
     }
 
     IEnumerator TurnPuzzleButtonBack(Animator anim, Button btn, Sprite puzzleImage)
@@ -182,6 +184,8 @@ public class PuzzleGameManager : MonoBehaviour
         anim.Play("TurnBack");
         yield return new WaitForSeconds(0.4f);
         btn.image.sprite = puzzleImage;
+        yield return new WaitForSeconds(0.4f);
+        anim.Play("Idle");
     }
 
     void AddListeners()
